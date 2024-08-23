@@ -51,15 +51,10 @@ def handle_input():
     global force_player1, force_player2
     keys = pygame.key.get_pressed()
     
-    if keys[pygame.K_UP]:
-        force_player1 += 1
-    elif keys[pygame.K_DOWN]:
-        force_player1 -= 1
-    
-    if keys[pygame.K_w]:
-        force_player2 += 1
-    elif keys[pygame.K_s]:
-        force_player2 -= 1
+    if keys[pygame.K_LEFT]:
+        force_player1 += 0.25
+    elif keys[pygame.K_RIGHT]:
+        force_player1 -= 0.25
 
 def draw():
     screen.fill(BLACK)
